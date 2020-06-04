@@ -11,7 +11,7 @@ jobs:
         with:
           python-version: '3.6.10'
       - name: move to aws_batch
-        run: cd aws_batch
+        run: cd && pwd
       - name: install pipenv
         run: pip install pipenv
       - name: install dependencies
