@@ -10,14 +10,11 @@ jobs:
       - uses: actions/setup-python@v1
         with:
           python-version: '3.6.10'
-      - name: move to app
-        run: cd app
-      - name: install pipenv
-        run: pip install pipenv
-      - name: install dependencies
-        run: pipenv install
-      - name: ls
-        run: ls -la
-      - name: run unit test
-        run: python -m unittest discover ./test/unit_test
+      - name: run test
+        run: |
+          cd app
+          pip install pipenv
+          pipenv install
+          python -m unittest discover ./test/unit_test
+          ls -la
 
