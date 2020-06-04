@@ -16,6 +16,8 @@ jobs:
         run: pip install pipenv
       - name: install dependencies
         run: pipenv install
+      - name: ls
+        run: ls -la
       - name: run unit test
         run: python -m unittest discover ./test/unit_test
 
