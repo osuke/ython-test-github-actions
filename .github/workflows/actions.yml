@@ -1,11 +1,11 @@
 name: python-ga
 on:
   pull_request:
-  types: [opened, synchronize]
+    types: [opened, synchronize]
 jobs: 
   unit-test:
     runs-on: ubuntu-latest
-    step:
+    steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v1
         with:
