@@ -1,0 +1,16 @@
+name: python-ga
+jobs: 
+  unit-test:
+    runs-on: ubuntu-latest
+    step:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v1
+        with:
+          python-version: '3.6.5'
+      - name: move to aws_batch
+        run: cd aws_batch
+      - name: install pipenv
+        run: pip install pipenv
+      - name: install dependencies
+        run: pipenv install
+
