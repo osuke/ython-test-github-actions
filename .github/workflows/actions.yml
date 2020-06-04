@@ -1,4 +1,7 @@
 name: python-ga
+on:
+  pull_request:
+  types: [opened, synchronize]
 jobs: 
   unit-test:
     runs-on: ubuntu-latest
