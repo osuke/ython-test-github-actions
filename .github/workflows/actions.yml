@@ -1,7 +1,7 @@
 name: python-ga
-on:
-  pull_request:
-    types: [opened, synchronize]
+on: push
+  # pull_request:
+  #   types: [opened, synchronize]
 jobs: 
   unit-test:
     runs-on: ubuntu-latest
@@ -16,4 +16,6 @@ jobs:
         run: pip install pipenv
       - name: install dependencies
         run: pipenv install
+      - name: run unit test
+        run: python -m unittest discover ./test/unit_test
 
