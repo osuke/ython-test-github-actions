@@ -1,10 +1,9 @@
 name: python-actions
-# on: push
 on:
   pull_request:
     types: [opened, synchronize]
 jobs: 
-  unit-test:
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
