@@ -20,6 +20,7 @@ jobs:
       - name: run unit test
         run: |
           cd app
+          which python
           pip install pipenv
           pipenv install
           python -m unittest discover ./test/unit_test
