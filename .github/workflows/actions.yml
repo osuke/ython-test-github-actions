@@ -21,4 +21,6 @@ jobs:
           ls -la
 
       - name: run integration test
-        run: docker-compose run --rm hoge python --version
+        run: |
+          cd app
+          docker-compose run --rm hoge python --version
